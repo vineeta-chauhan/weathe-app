@@ -1,0 +1,21 @@
+
+.dropDownTopContainer{
+  display: flex;
+  flex-direction: column;
+}
+.labelRightMargin{
+  margin-right: 1rem;
+}
+label{
+  text-align: center;
+}
+select{
+  background: #8080804d;
+  height: 4vh;
+  width: 30vw;
+  border-radius: 5px;
+  border: 0px;
+}
+.dropDownList:hover{
+  cursor: pointer;
+}

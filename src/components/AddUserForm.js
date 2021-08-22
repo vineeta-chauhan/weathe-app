@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { notification } from "antd";
 import styles from './adduser.module.css';
 import logo from '../assets/calendar.png';
+import Dropdown from './Dropdown';
 
 
 const AddUserForm = () => {
@@ -25,7 +26,7 @@ const AddUserForm = () => {
 
   const validatePhoneNumber = (phone) => {
     const regex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-    return regex.test(phone);
+    return regex.test(phone.trim());
   }
 
   const submitformHandler = (e) => {
@@ -40,18 +41,18 @@ const AddUserForm = () => {
       });
       return;
     }
-    // if (!isemailValidated) {
-    //   notification.error({
-    //     description: "please enter a valid email id ",
-    //   });
-    //   return;
-    // }
-    // if (!isPhoneNumberIsValidated) {
-    //   notification.error({
-    //     description: "please enter a valid email id ",
-    //   });
-    //   return;
-    // }
+    if (!isemailValidated) {
+      notification.error({
+        description: "please enter a valid email id ",
+      });
+      return;
+    }
+    if (!isPhoneNumberIsValidated) {
+      notification.error({
+        description: "please enter a valid phone no",
+      });
+      return;
+    }
     let users = [];
     try {
       users = JSON.parse(localStorage.getItem('users'))
@@ -70,6 +71,9 @@ const AddUserForm = () => {
       state,
     });
     localStorage.setItem('users', JSON.stringify(users));
+    notification.success({
+      description: "User added successfully ",
+    });
   }
 
 
@@ -78,39 +82,49 @@ const AddUserForm = () => {
       <form action="" className={styles.formContainer}>
         <div className={styles.container}>
           <div className={styles.userContainer}>
-            <label className={styles.label} htmlFor="uesrname">UserName
-            </label>
-            <input className={styles.inputContainer}
+            <label className={styles.label}>UserName</label>
+            <input
+              className={styles.inputContainer}
               type="text" name="username" value={userName}
-              onChange={(e) => setUserName(e.target.value)} />
+              onChange={(e) => setUserName(e.target.value)}
+            />
           </div>
 
           <div className={styles.userContainer}>
-            <label className={styles.label} htmlFor="email">Email
-            </label>
-            <input className={styles.inputContainer} type="text"
-              name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <label className={styles.label}>Email</label>
+            <input
+              className={styles.inputContainer} type="text"
+              name="email" value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
 
           <div className={styles.userContainer}>
-            <label className={styles.label} htmlFor="phone">Phone
-            </label>
-            <input className={styles.inputContainer} type="text" name="Phone" value={phone} id="phone" onChange={(e) => setPhone(e.target.value)} />
+            <label className={styles.label}>Phone</label>
+            <input
+              className={styles.inputContainer}
+              type="text" name="Phone" value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+            />
           </div>
 
           <div className={styles.imageContainer}>
             <div className={styles.userContainer}>
-              <label className={styles.label} htmlFor="dateofbirth">DOB
-              </label>
-              <input className={styles.inputContainer} type="text" name="dob" id="dob" value={DOB} onChange={(e) => setDOB(e.target.value)} />
-              <img src={logo} />
+              <label className={styles.label}>DOB</label>
+              <input
+                className={styles.inputContainer}
+                type="text" name="dob" value={DOB}
+                onChange={(e) => setDOB(e.target.value)}
+              />
+              <img className={styles.imgContainer} src={logo} />
             </div>
           </div>
 
           <div className={styles.userContainer}>
-            <label className={styles.label} htmlFor="state">State
-            </label>
-            <input className={styles.inputContainer} type="text" name="state" id="state" value={state} onChange={(e) => setState(e.target.value)} />
+            <label className={styles.label}>State</label>
+            <Dropdown
+              handleOnSelect={(state) => setState(state)}
+            />
           </div>
 
           <div className={styles.btnContainer}>

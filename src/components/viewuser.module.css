@@ -1,0 +1,14 @@
+
+.mainContainer{
+  height: 100vh;
+}
+.contentContainer{
+  height: 90vh;
+  width: 70vw;
+  background: white;
+  margin-left: 2rem;
+  border: 5px solid white;
+  border-radius: 10px;
+  margin-top: 5vh;
+  padding: 1rem;
+}

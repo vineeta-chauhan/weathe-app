@@ -1,7 +1,7 @@
 .mainContainer{
   display: flex;
   flex-direction: row;
-  background-color: burlywood;
+  background-color: #00e7ff1f;
 }
 .sideBar{
   flex: 1;
@@ -9,5 +9,10 @@
 }
 .contentBar{
   flex: 4;
-  height: 100vh;
+  /* height: 100vh; */
+}
+.headerMainContainer{
+  display: flex;
+  flex:0.3;
+ 
 }

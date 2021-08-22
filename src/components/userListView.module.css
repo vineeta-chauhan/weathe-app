@@ -1,0 +1,23 @@
+.mainContainer{
+  display: flex;
+  flex-flow: column nowrap;
+  overflow: scroll;
+  height: 60vh;
+}
+.userContainer{
+  height: 5vw;
+  min-height: 60px;
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 10px;
+}
+.avatar{
+  margin-right: 1rem;
+}
+.infoTxt{
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 1rem;
+  color: grey;
+}

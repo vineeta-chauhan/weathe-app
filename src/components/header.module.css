@@ -1,0 +1,37 @@
+.headerContainer{
+  background-color: white;
+  width:70vw; 
+  height: 60px; 
+  margin-top: 2rem;
+  display: flex;
+  margin-left: 2rem;
+  border-radius: 10px;
+}
+.userContainer{
+  margin-left: auto;
+  margin-right: 13px;
+  float: right;
+  margin-top: 1rem;
+  font-size: 14px;
+  
+}
+.dateWrapper{
+  margin-left: 3px;
+ font-size: 14px;
+}
+.dateContainer{
+  display: flex;
+  align-items: center;
+}
+.monthWrapper{
+  margin-left: 4px;
+  font-size: 14px;
+}
+.dayWrapper{
+  margin-left: 11px;
+  font-size: 14px;
+}
+.timeWrapper{
+  margin-left: 3px;
+  font-size: 14px;
+}

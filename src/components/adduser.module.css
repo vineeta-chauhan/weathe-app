@@ -14,65 +14,50 @@
   margin-left: 2rem;
   border: 5px solid white;
   border-radius: 10px;
-  margin-top: 62px;
+  margin-top: 5vh;
 }
 .userContainer{
   margin: 2px;
   padding: 1rem;
+  display: flex;
+  align-items: center;
 }
 
-/* #email{
-  margin-left: 2rem;
-  width: 20rem;
-    height: 2rem;
-    background: white;
-    border: none;
-    border-radius: 5px;
-} */
 .label{
   color: grey;
   font-size: larger;
+  width: 10vw;
+  text-align: start;
 }
 
 .inputContainer{
-  width: 20rem;
-    height: 2rem;
-    background: #8080804d;
-    border: none;
-    border-radius: 5px;
-    margin-left: 2rem;
+  width: 30vw;
+  height: 4vh;
+  background: #8080804d;
+  border: none;
+  border-radius: 5px;
 }
-
-
 .label1{
   margin-right: 10px;
   color: grey;
 }
 .btnContainer{
   flex-direction: column;
-    margin-top: 27px;
-    display: flex;
-    border-radius: 5px;
-    
+  margin-top: 27px;
+  display: flex;
+  border-radius: 5px;
 }
 .button{
   width: 20rem;
-    height: 2rem;
-    background: #00b8ff87;
-    border: none;
-    border-radius: 5px;
-    margin-left: 5rem;
-    color: white;
-    font-size: larger;
-    border: none;
+  height: 2rem;
+  background: #00b8ff87;
+  border: none;
+  border-radius: 5px;
+  margin-left: 5rem;
+  color: white;
+  font-size: larger;
+  border: none;
 }
-.password-1{
-
+.imgContainer{
+  margin-left: -2rem;
 }
-/* .imageContainer{
-  background-image: url("calendar.png.");
-  width: 100%;
-  height: 100%;
-  flex:1;
-  background-color: darkorchid;
-} */
