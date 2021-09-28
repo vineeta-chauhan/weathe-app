@@ -1,10 +1,6 @@
-.sidebar{
-  height: 90vh;
-  margin: 1rem;
-  margin-top: 5vh;
-  background: white;
-  border-radius: 10px;
-  padding: 10% 4%;
+.sideBar{
+  flex: 1;
+  height: 100vh;
 }
 .button{
   width: 100%;

@@ -2,7 +2,6 @@ import React from "react";
 import styles from './dropdown.module.css';
 import { useState } from "react";
 
-import { CaretDownOutlined } from '@ant-design/icons';
 
 const Dropdown = (props) => {
   const options = [
@@ -45,12 +44,11 @@ const Dropdown = (props) => {
   ];
 
   const {
-    dropDownLabel, handleOnSelect,
-    position = 'side', labelStyle = {},
+    handleOnSelect,
     dropDownStyle
   } = props;
-  const [selectedOption, setSelectedOption] = useState('Karnataka');
 
+  const [selectedOption, setSelectedOption] = useState('Karnataka');
 
   const oneSelectHandler = (e) => {
     const value = e.target.value;

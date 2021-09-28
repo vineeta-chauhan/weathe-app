@@ -14,13 +14,16 @@ const Weather = () => {
     var options = {
       method: 'GET',
       url: 'https://weatherapi-com.p.rapidapi.com/forecast.json',
+      
       params: { q: selectedState },
       headers: {
         'x-rapidapi-key': 'af9f204779mshe604b6c4450a031p15dde8jsn484730c962ca'
       }
+      
     };
 
     axios.request(options).then(function (response) {
+      console.log(response.data,"**********")
       const weatherApiData = response.data?.current;
       if (typeof weatherApiData === 'object') {
         setWeatherData(weatherApiData);
